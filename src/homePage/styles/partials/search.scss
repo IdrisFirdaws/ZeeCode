@@ -1,0 +1,70 @@
+.search {
+  .content {
+    .contentLeft {
+      width: 45%;
+      .box1 {
+        width: 90%;
+        border-radius: 10px;
+        border: 2px dashed var(--main-color);
+        padding: 5px;
+
+        .box2 {
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+    img {
+      width: 50px;
+    }
+
+    .contentRight {
+      width: 45%;
+      .title {
+        text-align: left;
+        span {
+          background: var(--gradient3);
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          z-index: 999;
+        }
+      }
+      .benefitList {
+        list-style: none;
+        .benefitItem {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 20px;
+          }
+
+          .text {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .search {
+    .content {
+      .contentLeft {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+      .contentRight {
+        width: 100%;
+      }
+    }
+  }
+}

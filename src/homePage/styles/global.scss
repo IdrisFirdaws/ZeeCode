@@ -1,0 +1,170 @@
+:root {
+  --bg-color: rgba(208, 253, 253, 0.3);
+  --tex-color: #023b32;
+  --bg-light: #f1fdfd;
+  --bg-dark: #1d1c1c;
+  --text-ligth: #fff;
+  --main-color: #62e9d7;
+  --bg-tag: rgba(208, 253, 253, 0.5);
+
+  --box-shadow: 0 0 6px #8f8f8f;
+
+  --gradient1: linear-gradient(0deg, #f34f80 -50%, #62e9d7 80%);
+  --gradient2: linear-gradient(45deg, #62e9d7 30%, #f34f80 120%);
+  --gradient3: linear-gradient(45deg, #023b32 30%, #f34f80 120%);
+  --gradient4: linear-gradient(180deg, #f34f80 -50%, #62e9d7 80%);
+  --gradient5: linear-gradient(45deg, #62e9d7 60%, #f34f80 120%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 99vw !important;
+  overflow-x: hidden !important;
+  padding: 2px;
+  background-color: var(--bg-color);
+  color: var(--tex-color);
+}
+
+.App {
+  border: 2px solid var(--main-color);
+}
+
+.sub {
+  display: flex;
+  padding: 50px 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.titleText {
+  text-align: center;
+  width: 60%;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.subTitle {
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.btn1 {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #62e9d7;
+  background: var(--gradient1);
+  border: none;
+  outline: none;
+  color: var(--text-ligth);
+  font-weight: 400;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.btn2 {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.tag {
+  padding: 10px 5px;
+  height: fit-content;
+  width: fit-content;
+  background-color: var(--bg-tag);
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 80px;
+  input {
+    height: 40px;
+    padding: 0 5px;
+    width: 100%;
+    border: 1px solid var(--main-color);
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px 0 0 4px;
+  }
+  .searchbtn {
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 0 4px 4px 0;
+    img {
+      width: 20px;
+    }
+  }
+}
+
+@import url(partials/navbar.scss);
+@import url(partials/hero.scss);
+@import url(partials/partners.scss);
+@import url(partials/search.scss);
+@import url(partials/courses.scss);
+@import url(partials/teacher.scss);
+@import url(partials/testemonial.scss);
+@import url(partials//community.scss);
+@import url(partials/footer.scss);
+
+@media screen and (max-width: 900px) {
+  .sub {
+    flex-direction: column;
+    padding: 50px 5%;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .searchBox {
+    width: 100%;
+  }
+}

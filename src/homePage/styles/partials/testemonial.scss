@@ -1,0 +1,37 @@
+.testemonial {
+  background-color: var(--main-color);
+  background: var(--gradient1);
+  .testemonialItem {
+    padding: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: var(--bg-light);
+    box-shadow: var(--box-shadow);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    .testTop {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      margin-bottom: 20px;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid var(--main-color);
+        object-fit: cover;
+      }
+      .testTopRight {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        justify-content: center;
+        .name {
+          font-weight: 900;
+          font-size: 1.3em;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

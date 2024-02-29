@@ -1,0 +1,11 @@
+.contact {
+  background: var(--gradient4);
+  margin-top: -2px;
+  .inner {
+    background-color: var(--bg-light);
+    border-radius: 0 100px 0 100px;
+    p {
+      margin: 20px 0;
+    }
+  }
+}

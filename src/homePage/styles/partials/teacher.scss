@@ -1,0 +1,57 @@
+.teacher {
+  .teachRight {
+    width: 45%;
+    .subTitle {
+      span {
+        background: var(--gradient3);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        z-index: 999;
+      }
+    }
+    button {
+      margin: 20px 0;
+      a {
+        color: var(--tex-color);
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+  .teachLeft {
+    width: 45%;
+    .box1 {
+      width: 90%;
+      border-radius: 0 0 50% 50%;
+      border: 2px dashed var(--main-color);
+      padding: 5px;
+
+      .box2 {
+        width: 100%;
+        background-color: var(--main-color);
+        background: var(--gradient2);
+        border-radius: 0 0 50% 50%;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          border-radius: 0 0 50% 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .teacher {
+    width: 100%;
+    .teachRight {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    .teachLeft {
+      width: 100%;
+      margin-left: 50px;
+    }
+  }
+}
