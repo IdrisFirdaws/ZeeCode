@@ -1,0 +1,240 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blinkAndChangeColor {
+  0%,
+  4.9% {
+    opacity: 1; /* Visible */
+    color: red; /* Initial text color */
+  }
+  5%,
+  9.9% {
+    opacity: 0; /* Invisible */
+    color: blue; /* New text color */
+  }
+  10%,
+  14.9% {
+    opacity: 1; /* Visible */
+    color: red; /* Initial text color */
+  }
+  15%,
+  19.9% {
+    opacity: 0; /* Invisible */
+    color: blue; /* New text color */
+  }
+  20%,
+  29.9% {
+    opacity: 1; /* Visible */
+    color: var(--main-color); /* Another text color */
+  }
+  30%,
+  39.9% {
+    opacity: 0; /* Invisible */
+    color: green; /* Another text color */
+  }
+  40%,
+  49.9% {
+    opacity: 1; /* Visible */
+    color: blue; /* Another text color */
+  }
+  50%,
+  64.9% {
+    opacity: 0; /* Invisible */
+    color: orange; /* Another text color */
+  }
+  65%,
+  79.9% {
+    opacity: 1; /* Visible */
+    color: purple; /* Another text color */
+  }
+  80%,
+  94.9% {
+    opacity: 0; /* Invisible */
+    color: yellow; /* Another text color */
+  }
+  95%,
+  100% {
+    opacity: 1; /* Visible */
+    color: pink; /* Another text color */
+  }
+  // 90%,
+  // 100% {
+  //   opacity: 0; /* Invisible */
+  //   color: teal; /* Another text color */
+  // }
+}
+
+.formContainer {
+  display: flex;
+  position: relative;
+  margin-top: -50px;
+}
+
+.formWrapper {
+  width: 50%;
+  padding: 100px 0;
+  display: grid;
+  justify-content: center;
+}
+
+.formContent {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 30px 50px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.signinFormcontent {
+  max-height: 400px;
+}
+
+.signupFormcontent {
+  max-height: 500px;
+}
+
+.logoContainer {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+.logo {
+  height: 100px;
+}
+
+.formTitle {
+  font-size: 2em;
+  font-weight: 700;
+  padding: 0 10px 0;
+  text-align: center;
+}
+
+.formDesc {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.formItem {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  background-color: #f4fafa;
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid var(--main-color);
+}
+
+.formLabel {
+  margin-right: 5px;
+}
+
+.formInput {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--bg-light);
+}
+
+.formBtncontainer {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.formRedirectcontainer {
+  text-align: center;
+}
+
+.formRedirectText {
+  color: #5e6df8;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.formRedirect {
+  color: var(--main-color);
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.formImg {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  h1 {
+    font-weight: 1200;
+    font-size: 6em;
+    color: var(--main-color);
+    animation: blinkAndChangeColor 2s ease-in-out infinite;
+  }
+}
+
+.formImg::before {
+  width: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-light);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Cpath fill='none' stroke-width='101.2' stroke-opacity='0.88' id='a' d='M0-478l-413.96 717h827.92L0-478l-413.96 717h827.92z'/%3E%3C/defs%3E%3Cg transform='scale(0.379)' style='transform-origin:center'%3E%3Cg style='transform-origin:center'%3E%3Cg transform='rotate(-160 0 0)' style='transform-origin:center'%3E%3Cg transform='translate(1000 750)'%3E%3Cuse stroke='%23064040' href='%23a' transform='rotate(-80 0 0) scale(0.2)'/%3E%3Cuse stroke='%23094646' href='%23a' transform='rotate(-70 0 0) scale(0.3)'/%3E%3Cuse stroke='%230c4d4c' href='%23a' transform='rotate(-60 0 0) scale(0.4)'/%3E%3Cuse stroke='%230f5352' href='%23a' transform='rotate(-50 0 0) scale(0.5)'/%3E%3Cuse stroke='%23135958' href='%23a' transform='rotate(-40 0 0) scale(0.6)'/%3E%3Cuse stroke='%2316605e' href='%23a' transform='rotate(-30 0 0) scale(0.7)'/%3E%3Cuse stroke='%23196764' href='%23a' transform='rotate(-20 0 0) scale(0.8)'/%3E%3Cuse stroke='%231d6d6b' href='%23a' transform='rotate(-10 0 0) scale(0.9)'/%3E%3Cuse stroke='%23207471' href='%23a' transform=''/%3E%3Cuse stroke='%23247b77' href='%23a' transform='rotate(10 0 0) scale(1.1)'/%3E%3Cuse stroke='%2328827d' href='%23a' transform='rotate(20 0 0) scale(1.2)'/%3E%3Cuse stroke='%232b8984' href='%23a' transform='rotate(30 0 0) scale(1.3)'/%3E%3Cuse stroke='%232f908a' href='%23a' transform='rotate(40 0 0) scale(1.4)'/%3E%3Cuse stroke='%23339790' href='%23a' transform='rotate(50 0 0) scale(1.5)'/%3E%3Cuse stroke='%23379e97' href='%23a' transform='rotate(60 0 0) scale(1.6)'/%3E%3Cuse stroke='%233ba59d' href='%23a' transform='rotate(70 0 0) scale(1.7)'/%3E%3Cuse stroke='%233fada3' href='%23a' transform='rotate(80 0 0) scale(1.8)'/%3E%3Cuse stroke='%2343b4aa' href='%23a' transform='rotate(90 0 0) scale(1.9)'/%3E%3Cuse stroke='%2347bbb0' href='%23a' transform='rotate(100 0 0) scale(2)'/%3E%3Cuse stroke='%234cc3b7' href='%23a' transform='rotate(110 0 0) scale(2.1)'/%3E%3Cuse stroke='%2350cabd' href='%23a' transform='rotate(120 0 0) scale(2.2)'/%3E%3Cuse stroke='%2354d2c4' href='%23a' transform='rotate(130 0 0) scale(2.3)'/%3E%3Cuse stroke='%2359daca' href='%23a' transform='rotate(140 0 0) scale(2.4)'/%3E%3Cuse stroke='%235de1d1' href='%23a' transform='rotate(150 0 0) scale(2.5)'/%3E%3Cuse stroke='%2362E9D7' href='%23a' transform='rotate(160 0 0) scale(2.6)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1;
+  animation: rotate 10s linear infinite;
+}
+
+@media screen and (max-width: 900px) {
+  .formContainer {
+    margin-top: 0;
+  }
+
+  .formWrapper {
+    height: 100vh;
+    padding: 200px 0;
+  }
+
+  .formContent {
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 90%;
+  }
+
+  .formItem {
+    width: 90%;
+  }
+
+  .formImg {
+    padding: 250px 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .formContainer {
+    display: block;
+    width: 100vw;
+  }
+
+  .formWrapper {
+    width: 100%;
+    padding: 200px 0;
+  }
+
+  .formImg {
+    display: none;
+  }
+}
+
+@import url(partials/preloader.scss);

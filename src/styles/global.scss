@@ -1,0 +1,48 @@
+:root {
+  --bg-color: rgba(208, 253, 253, 0.3);
+  --tex-color: #023b32;
+  --bg-light: #f1fdfd;
+  --bg-dark: #1d1c1c;
+  --text-ligth: #fff;
+  --main-color: #62e9d7;
+  --bg-tag: rgba(208, 253, 253, 0.5);
+
+  --box-shadow: 0 0 6px #8f8f8f;
+
+  --gradient1: linear-gradient(0deg, #f34f80 -50%, #62e9d7 80%);
+  --gradient2: linear-gradient(45deg, #62e9d7 30%, #f34f80 120%);
+  --gradient3: linear-gradient(45deg, #023b32 30%, #f34f80 120%);
+  --gradient4: linear-gradient(180deg, #f34f80 -50%, #62e9d7 80%);
+  --gradient5: linear-gradient(45deg, #62e9d7 60%, #f34f80 120%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 99vw !important;
+  overflow-x: hidden !important;
+  padding: 2px;
+  background-color: var(--bg-color);
+  color: var(--tex-color);
+}
+
+.App {
+  border: 2px solid var(--main-color);
+  .main {
+    margin-top: 50px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+@import url(partials/navbar.scss);
+@import url(partials/footer.scss);
+
+@import url(../homePage/styles/homePage.scss);
+@import url(../auth/styles/global.scss);

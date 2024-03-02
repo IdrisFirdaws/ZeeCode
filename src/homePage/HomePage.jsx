@@ -1,26 +1,24 @@
-import "./styles/global.scss";
+import "./styles/homePage.scss";
 import Courses from "./components/Courses";
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Partners from "./components/Partners";
+// import Partners from "./components/Partners";
 import Search from "./components/Search";
 import Teacher from "./components/Teacher";
 import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
 import Community from "./components/Contact";
+import QuoteBox from "./components/QuoteBox";
 
 function HomePage() {
     return (
         <div className="App">
-            <Navbar />
             <Hero />
-            <Partners />
+            <QuoteBox />
+            {/* <Partners /> */}
             <Search />
             <Courses />
             <Teacher />
             <Testimonials />
             <Community />
-            <Footer />
         </div>
     );
 }
