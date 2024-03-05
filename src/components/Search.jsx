@@ -64,6 +64,7 @@ const Search = () => {
                         </li>
 
                     </ul>
+                    <button className="btn1">Start Now</button>
                 </div>
             </div>
 

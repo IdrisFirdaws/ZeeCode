@@ -1,94 +1,30 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./styles/global.scss";
-import HomePage from "./homePage/HomePage";
-import SignIn from "./auth/SignIn";
-import SignUp from "./auth/SignUp";
 import Navbar from "./components/Navbar";
+import Courses from "./components/Courses";
+import Hero from "./components/Hero";
+// import Partners from "./components/Partners";
+import Search from "./components/Search";
+import Teacher from "./components/Teacher";
+import Testimonials from "./components/Testimonials";
+import Community from "./components/Contact";
+import QuoteBox from "./components/QuoteBox";
 import Footer from "./components/Footer";
-import Menu from "./components/Menu";
-import Start from "./tutorials/pages/Start";
-import Complete from "./tutorials/pages/Complete";
 
-const App = () => {
-  // const Layout = () => {
-  //   return (
-  //     <div className="main">
-  //       <Navbar />
-  //       <div className="container">
-  //         <div className="menuContainer">
-  //           <Menu />
-  //         </div>
-  //         <div className="tutorialContainer">
-  //           <Outlet />
-  //         </div>
-  //       </div>
-  //       <Footer />
-  //     </div>
-  //   );
-  // };
-
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <HomePage />,
-  //   },
-
-  //   {
-  //     path: "/tutorial",
-  //     element: <Layout />,
-  //     children: [
-  //       { path: "/start", element: <Start /> },
-  //       { path: "/complete", element: <Complete /> },
-  //     ],
-  //   },
-  //   {
-  //     path: "/signin",
-  //     element: <SignIn />,
-  //   },
-  //   {
-  //     path: "/signup",
-  //     element: <SignUp />,
-  //   },
-  // ]);
-
+function App() {
   return (
     <div className="App">
-      <Router>
-        <Navbar />
-
-        <div className="container main">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route
-              path="/start"
-              element={
-                <>
-                  <Menu />
-                  <Start />
-                </>
-              }
-            />
-
-            <Route
-              path="/complete"
-              element={
-                <>
-                  <Menu />
-                  <Complete />
-                </>
-              }
-            />
-          </Routes>
-        </div>
-        <Footer />
-      </Router>
+      <Navbar />
+      <Hero />
+      <QuoteBox />
+      {/* <Partners /> */}
+      <Search />
+      <Courses />
+      <Teacher />
+      <Testimonials />
+      <Community />
+      <Footer />
     </div>
   );
-  // <RouterProvider router={router} />;
-};
+}
 
 export default App;

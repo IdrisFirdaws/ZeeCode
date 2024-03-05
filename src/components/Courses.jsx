@@ -109,6 +109,8 @@ const Courses = () => {
                     </div>
                 </div>
             </div>
+
+            <button className='btn1'>Start Now</button>
         </div>
     )
 }
