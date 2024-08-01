@@ -1,4 +1,5 @@
 import React from 'react'
+import * as icon from 'react-bootstrap-icons'
 
 const Search = () => {
     return (
@@ -9,7 +10,7 @@ const Search = () => {
             <div className="searchBox">
                 <input type="text" placeholder='search for tutorials' />
                 <button className="searchbtn btn1">
-                    <img src="assets/menu.svg" alt="" />
+                    <icon.Search />
                 </button>
             </div>
 
@@ -29,42 +30,48 @@ const Search = () => {
 
                     <ul className="benefitList">
                         <li className="benefitItem">
-                            <img src="assets/menu.svg" alt="" />
+                            <div className="icon">
+                                <icon.FilePersonFill />
+                            </div>
+
                             <div className="text">
                                 <h4 className="subTitle">
-                                    some title
+                                    Personalized Learning Paths
                                 </h4>
                                 <p className="contentText">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi magnam, expedita excepturi ipsum rerum laudantium placeat ad iure reiciendis voluptates nobis debitis. Laudantium adipisci, aliquam omnis accusamus a quas officia.
-                                </p>
+                                    Experience tailored tutorials that adapt to your individual learning style and pace. Our platform’s adaptive algorithms ensure that each lesson meets your unique needs, making learning more effective and engaging.                                </p>
                             </div>
                         </li>
 
                         <li className="benefitItem">
-                            <img src="assets/menu.svg" alt="" />
+                            <div className="icon">
+                                <icon.AlarmFill />
+                            </div>
                             <div className="text">
                                 <h4 className="subTitle">
-                                    some title
+                                    Flexible Access Anytime, Anywhere
                                 </h4>
                                 <p className="contentText">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi magnam, expedita excepturi ipsum rerum laudantium placeat ad iure reiciendis voluptates nobis debitis. Laudantium adipisci, aliquam omnis accusamus a quas officia.
-                                </p>
+                                    Gain access to a vast library of tutorials and resources whenever you need them. Whether you’re on the go or relaxing at home, our online platform provides the flexibility to learn at your convenience.                                </p>
                             </div>
                         </li>
                         <li className="benefitItem">
-                            <img src="assets/menu.svg" alt="" />
+                            <div className="icon">
+                                <icon.PersonFillGear />
+                            </div>
                             <div className="text">
                                 <h4 className="subTitle">
-                                    some title
+                                    Expert Guidance and Support
                                 </h4>
                                 <p className="contentText">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi magnam, expedita excepturi ipsum rerum laudantium placeat ad iure reiciendis voluptates nobis debitis. Laudantium adipisci, aliquam omnis accusamus a quas officia.
-                                </p>
+                                    Benefit from tutorials created by industry experts who bring real-world experience and insights to each lesson. Our support team is always available to help you overcome challenges and achieve your learning goals.                                </p>
                             </div>
                         </li>
 
                     </ul>
-                    <button className="btn1">Start Now</button>
+                    <a href="/login">
+                        <button className="btn1">Start Now</button>
+                    </a>
                 </div>
             </div>
 

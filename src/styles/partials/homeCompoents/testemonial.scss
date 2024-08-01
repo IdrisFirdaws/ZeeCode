@@ -1,7 +1,7 @@
-.testemonial {
+.testimonial {
   background-color: var(--main-color);
   background: var(--gradient1);
-  .testemonialItem {
+  .testimonialItem {
     padding: 20px;
     margin-right: 10px;
     margin-left: 10px;
@@ -9,6 +9,7 @@
     box-shadow: var(--box-shadow);
     border-radius: 4px;
     margin-bottom: 20px;
+    min-height: 300px;
     .testTop {
       display: flex;
       gap: 5px;

@@ -5,10 +5,12 @@
   padding: 20px 10% 10px 10%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--bg-color);
   box-shadow: var(--box-shadow);
   z-index: 999;
   margin-top: 2px;
+  height: 70px;
 
   .links {
     list-style: none;

@@ -1,30 +1,47 @@
-import "./styles/global.scss";
-import Navbar from "./components/Navbar";
-import Courses from "./components/Courses";
-import Hero from "./components/Hero";
-// import Partners from "./components/Partners";
-import Search from "./components/Search";
-import Teacher from "./components/Teacher";
-import Testimonials from "./components/Testimonials";
-import Community from "./components/Contact";
-import QuoteBox from "./components/QuoteBox";
-import Footer from "./components/Footer";
+import React from "react";
+import {
+  createBrowserRouter,
+  Route,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+
+// Layouts
+import RootLayout from "./layout/RootLayout";
+
+// Pages
+import LandingPage from "./pages/LandingPage";
+import Login from "./pages/auth/Login";
+
+import ProtectedRoutes from "./ProtectedRoutes";
+import Home from "./pages/protected/Home";
+
+import NotFound from "./pages/NotFound";
+import PrivateLayout from "./layout/PrivateLayout";
+import LandingLayout from "./layout/LandingLayout";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route path="/" element={<LandingLayout />}>
+        <Route index element={<LandingPage />} />
+      </Route>
+
+      <Route path="login" element={<Login />} />
+
+      <Route path="/private" element={<ProtectedRoutes />} />
+
+      <Route path="/home" element={<PrivateLayout />}>
+        <Route index element={<Home />} />
+      </Route>
+
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  )
+);
 
 function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <QuoteBox />
-      {/* <Partners /> */}
-      <Search />
-      <Courses />
-      <Teacher />
-      <Testimonials />
-      <Community />
-      <Footer />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

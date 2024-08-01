@@ -1,4 +1,5 @@
 import React from 'react'
+import * as icon from 'react-bootstrap-icons'
 
 const Courses = () => {
     return (
@@ -6,7 +7,7 @@ const Courses = () => {
             <div className="title">
                 Our popular courses
             </div>
-            <p className='titleText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime pariatur ex, a, excepturi quod quos velit laborum id porro dolor fugiat! Dicta unde eaque tempora, adipisci vitae commodi ex cupiditate.</p>
+            <p className='titleText'>Explore a range of top-rated courses designed to equip you with the skills and knowledge you need to succeed. Whether you're looking to advance your career, explore new hobbies, or simply expand your horizons, our diverse selection of courses has something for everyone. Each course is crafted by experts in the field, ensuring high-quality content that's both engaging and practical. Join thousands of learners who have already discovered the benefits of our unique approach to education. Start your learning journey today and unlock new opportunities!</p>
 
             <div className="content">
                 <div className="courseItem">
@@ -16,10 +17,11 @@ const Courses = () => {
                         <span className="category">web design</span>
 
                         <span className="rate">
-                            <img src="assets/menu.svg" alt="" />
-                            <img src="assets/menu.svg" alt="" />
-                            <img src="assets/menu.svg" alt="" />
-                            <img src="assets/menu.svg" alt="" />
+                            <icon.StarFill />
+                            <icon.StarFill />
+                            <icon.StarFill />
+                            <icon.StarFill />
+                            <icon.StarHalf />
                         </span>
                     </div>
 
@@ -34,10 +36,10 @@ const Courses = () => {
                                 <img src="assets/persons/2.jpg" alt="" />
                                 <span className="name">Firdaws</span>
                             </div>
-                            <div className="tutorItem">
+                            {/* <div className="tutorItem">
                                 <img src="assets/persons/3.jpg" alt="" />
                                 <span className="name">Rufai</span>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -49,10 +51,11 @@ const Courses = () => {
                         <span className="category">web design</span>
 
                         <span className="rate">
-                            <img src="assets/menu.svg" alt="" />
-                            <img src="assets/menu.svg" alt="" />
-                            <img src="assets/menu.svg" alt="" />
-                            <img src="assets/menu.svg" alt="" />
+                            <icon.StarFill />
+                            <icon.StarFill />
+                            <icon.StarFill />
+                            <icon.StarFill />
+                            <icon.StarFill />
                         </span>
                     </div>
 
@@ -65,12 +68,12 @@ const Courses = () => {
                         <div className="tutors">
                             <div className="tutorItem">
                                 <img src="assets/persons/2.jpg" alt="" />
-                                <span className="name">Firdaws</span>
+                                <span className="name">ZeeCode</span>
                             </div>
-                            <div className="tutorItem">
+                            {/* <div className="tutorItem">
                                 <img src="assets/persons/3.jpg" alt="" />
                                 <span className="name">Rufai</span>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
@@ -83,10 +86,11 @@ const Courses = () => {
                         <span className="category">web design</span>
 
                         <span className="rate">
-                            <img src="assets/menu.svg" alt="" />
-                            <img src="assets/menu.svg" alt="" />
-                            <img src="assets/menu.svg" alt="" />
-                            <img src="assets/menu.svg" alt="" />
+                            <icon.StarFill />
+                            <icon.StarFill />
+                            <icon.StarFill />
+                            <icon.StarFill />
+                            <icon.StarHalf />
                         </span>
                     </div>
 
@@ -97,10 +101,10 @@ const Courses = () => {
 
                         <hr />
                         <div className="tutors">
-                            <div className="tutorItem">
+                            {/* <div className="tutorItem">
                                 <img src="assets/persons/2.jpg" alt="" />
-                                <span className="name">Firdaws</span>
-                            </div>
+                                <span className="name">ZeeCode</span>
+                            </div> */}
                             <div className="tutorItem">
                                 <img src="assets/persons/3.jpg" alt="" />
                                 <span className="name">Rufai</span>
@@ -110,7 +114,9 @@ const Courses = () => {
                 </div>
             </div>
 
-            <button className='btn1'>Start Now</button>
+            <a href="/login">
+                <button className='btn1'>Start Now</button>
+            </a>
         </div>
     )
 }

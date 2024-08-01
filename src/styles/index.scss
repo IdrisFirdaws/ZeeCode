@@ -23,7 +23,7 @@
 }
 
 body {
-  width: 99vw !important;
+  width: 100vw !important;
   overflow-x: hidden !important;
   padding: 2px;
   background-color: var(--bg-color);
@@ -37,11 +37,22 @@ body {
   }
 }
 
+main {
+  padding-top: 70px;
+}
+
 .sub {
   display: flex;
   padding: 50px 10%;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .sub {
+    flex-direction: column;
+    padding: 50px 5%;
+  }
 }
 
 .section {
@@ -57,6 +68,11 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 900px) {
+  .content {
+    flex-direction: column;
+  }
+}
 
 .title {
   font-size: 2em;
@@ -68,8 +84,8 @@ body {
 }
 
 .titleText {
-  text-align: center;
-  width: 60%;
+  text-align: justify;
+  width: 80%;
   font-size: 1.2em;
   margin-bottom: 20px;
 }
@@ -145,34 +161,30 @@ body {
   }
 }
 
-a {
-  text-decoration: none;
-}
-
-@import url(partials/navbar.scss);
-@import url(partials/footer.scss);
-@import url(partials/hero.scss);
-@import url(partials/quote.scss);
-@import url(partials/partners.scss);
-@import url(partials/search.scss);
-@import url(partials/courses.scss);
-@import url(partials/teacher.scss);
-@import url(partials/testemonial.scss);
-@import url(partials//community.scss);
-
-@media screen and (max-width: 900px) {
-  .sub {
-    flex-direction: column;
-    padding: 50px 5%;
-  }
-
-  .content {
-    flex-direction: column;
-  }
-}
-
 @media screen and (max-width: 500px) {
   .searchBox {
     width: 100%;
   }
 }
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+// global
+@import url(partials/globalComponents/navbar.scss);
+@import url(partials/globalComponents/footer.scss);
+
+//landingPage
+@import url(partials/homeCompoents/hero.scss);
+@import url(partials/homeCompoents/quote.scss);
+@import url(partials/homeCompoents/partners.scss);
+@import url(partials/homeCompoents/search.scss);
+@import url(partials/homeCompoents/courses.scss);
+@import url(partials/homeCompoents/teacher.scss);
+@import url(partials/homeCompoents/testemonial.scss);
+@import url(partials/homeCompoents/community.scss);
+
+//auth
+@import url(partials/auth/login.scss);

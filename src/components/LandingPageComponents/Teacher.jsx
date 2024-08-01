@@ -8,7 +8,7 @@ const Teacher = () => {
                     are you a certified teacher?
                     <h2>then <span>become an instructor</span></h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, magni, voluptatum adipisci qui quas dolorum nam animi eos a, placeat commodi minus quisquam repudiandae sunt officia ut nesciunt vero illo! elit. Id porro corrupti debitis magni qui et cumque. Tempora, ex culpa architecto qui, saepe quas aliquid sequi, ullam ea ducimus tempore quasi!</p>
+                <p>Are you passionate about teaching and eager to share your expertise with a global audience? Join our team of instructors and inspire learners worldwide! As a certified teacher, you have the unique opportunity to create impactful courses that help students grow and succeed. We provide all the tools and support you need to bring your knowledge to life, from course creation resources to a platform that reaches thousands of learners. Start your journey with us and make a difference in education today!</p>
 
                 <button className="btn1"><a href="#">Become an instructor</a></button>
             </div>
