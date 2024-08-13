@@ -10,7 +10,7 @@ export default function LandingLayout() {
             <main>
                 <Outlet />
             </main>
-
+            <Footer />
         </div>
     )
 }

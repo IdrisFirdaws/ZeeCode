@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Teacher = () => {
     return (
@@ -10,7 +11,9 @@ const Teacher = () => {
                 </div>
                 <p>Are you passionate about teaching and eager to share your expertise with a global audience? Join our team of instructors and inspire learners worldwide! As a certified teacher, you have the unique opportunity to create impactful courses that help students grow and succeed. We provide all the tools and support you need to bring your knowledge to life, from course creation resources to a platform that reaches thousands of learners. Start your journey with us and make a difference in education today!</p>
 
-                <button className="btn1"><a href="#">Become an instructor</a></button>
+                <button className="btn1">
+                    <Link to='/lessons/instructor'>Become an instructor</Link>
+                </button>
             </div>
 
             <div className="teachLeft">

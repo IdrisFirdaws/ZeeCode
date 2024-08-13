@@ -13,7 +13,7 @@ const Hero = () => {
                 </p>
 
                 <div className="buttons">
-                    <a href="/login">
+                    <a href="/private">
                         <button className="btn1">Start Now</button>
                     </a>
                     <button className="btn2">

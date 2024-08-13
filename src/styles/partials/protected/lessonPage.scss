@@ -1,0 +1,95 @@
+.lessonPage {
+  width: 100%;
+  position: relative;
+  padding: 20px 2%;
+
+  .sidebar {
+    width: 20%;
+    padding: 30px 20px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: var(--main-color);
+
+    ul {
+      list-style: none;
+
+      button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1em;
+        padding: 5px;
+        text-align: left;
+      }
+    }
+  }
+  .lessonContent {
+    width: calc(100% - 20%);
+    margin-left: 20%;
+
+    .toggleSidebarBtn {
+      display: none;
+    }
+
+    .title {
+      text-align: left;
+    }
+    .subLesson {
+      padding: 15px 0;
+      .subLessonDesc {
+        margin: 10px 0;
+      }
+      .subLessonContent {
+        padding: 5px 0;
+        .contentItem {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .lessonPage {
+    .sidebar {
+      width: 50%;
+      display: none;
+    }
+
+    .lessonContent {
+      width: 100%;
+      margin-left: 0;
+
+      .toggleSidebarBtn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1.5em;
+        z-index: 999;
+      }
+    }
+
+    &.open {
+      .sidebar {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .lessonPage {
+    .sidebar {
+      width: 100%;
+    }
+  }
+}

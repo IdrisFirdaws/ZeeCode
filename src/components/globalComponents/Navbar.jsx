@@ -25,7 +25,7 @@ const Navbar = ({ showButton }) => {
                 </li>
                 {showButton && (
                     <li className='lg'>
-                        <a href="/login">
+                        <a href="/private">
                             <button className="btn1">Start Now</button>
                         </a>
                     </li>

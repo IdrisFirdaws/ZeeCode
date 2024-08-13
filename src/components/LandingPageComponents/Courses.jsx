@@ -1,124 +1,77 @@
-import React from 'react'
-import * as icon from 'react-bootstrap-icons'
+import React from 'react';
+import * as icon from 'react-bootstrap-icons';
+import useLessons from '../../hooks/UseLessons';
 
 const Courses = () => {
+    const { lessons, loading, error } = useLessons();
+
+    // Handle the state where the data is still loading
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    // Handle errors
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+    // Check if lessons is an array before attempting to map
+    const lessonArray = Array.isArray(lessons) ? lessons : Object.values(lessons);
+
+    // Randomly select three courses
+    const getRandomCourses = (lessons, count) => {
+        const shuffled = lessons.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+    };
+
+    const selectedCourses = getRandomCourses(lessonArray, 3);
+
     return (
         <div className='courses section'>
-            <div className="title">
-                Our popular courses
-            </div>
-            <p className='titleText'>Explore a range of top-rated courses designed to equip you with the skills and knowledge you need to succeed. Whether you're looking to advance your career, explore new hobbies, or simply expand your horizons, our diverse selection of courses has something for everyone. Each course is crafted by experts in the field, ensuring high-quality content that's both engaging and practical. Join thousands of learners who have already discovered the benefits of our unique approach to education. Start your learning journey today and unlock new opportunities!</p>
+            <div className="title">Our popular courses</div>
+            <p className='titleText'>
+                Explore a range of top-rated courses designed to equip you with the skills and knowledge you need to succeed.
+                Whether you're looking to advance your career, explore new hobbies, or simply expand your horizons, our diverse
+                selection of courses has something for everyone. Each course is crafted by experts in the field, ensuring
+                high-quality content that's both engaging and practical. Join thousands of learners who have already discovered
+                the benefits of our unique approach to education. Start your learning journey today and unlock new opportunities!
+            </p>
 
             <div className="content">
-                <div className="courseItem">
-                    <img src="assets/posts/img-06.jpg" alt="" className='courseImg' />
-
-                    <div className="courseRate">
-                        <span className="category">web design</span>
-
-                        <span className="rate">
-                            <icon.StarFill />
-                            <icon.StarFill />
-                            <icon.StarFill />
-                            <icon.StarFill />
-                            <icon.StarHalf />
-                        </span>
-                    </div>
-
-                    <div className="courseDets">
-                        <div className="subTitle">
-                            introducton to HTML
+                {selectedCourses.map((course, index) => (
+                    <div className="courseItem" key={index}>
+                        <img src={course.imageUrl || "assets/posts/img-01.jpg"} alt="" className='courseImg' />
+                        <div className="courseRate">
+                            <span className="category">{course.category || "web design"}</span>
+                            <span className="rate">
+                                <icon.StarFill />
+                                <icon.StarFill />
+                                <icon.StarFill />
+                                <icon.StarFill />
+                                <icon.StarHalf />
+                            </span>
                         </div>
-
-                        <hr />
-                        <div className="tutors">
-                            <div className="tutorItem">
-                                <img src="assets/persons/2.jpg" alt="" />
-                                <span className="name">Firdaws</span>
-                            </div>
-                            {/* <div className="tutorItem">
-                                <img src="assets/persons/3.jpg" alt="" />
-                                <span className="name">Rufai</span>
-                            </div> */}
-                        </div>
-                    </div>
-                </div>
-
-                <div className="courseItem">
-                    <img src="assets/posts/img-03.jpg" alt="" className='courseImg' />
-
-                    <div className="courseRate">
-                        <span className="category">web design</span>
-
-                        <span className="rate">
-                            <icon.StarFill />
-                            <icon.StarFill />
-                            <icon.StarFill />
-                            <icon.StarFill />
-                            <icon.StarFill />
-                        </span>
-                    </div>
-
-                    <div className="courseDets">
-                        <div className="subTitle">
-                            bootstrap5 tutorial
-                        </div>
-
-                        <hr />
-                        <div className="tutors">
-                            <div className="tutorItem">
-                                <img src="assets/persons/2.jpg" alt="" />
-                                <span className="name">ZeeCode</span>
-                            </div>
-                            {/* <div className="tutorItem">
-                                <img src="assets/persons/3.jpg" alt="" />
-                                <span className="name">Rufai</span>
-                            </div> */}
-
-                        </div>
-                    </div>
-                </div>
-
-                <div className="courseItem">
-                    <img src="assets/posts/img-01.jpg" alt="" className='courseImg' />
-
-                    <div className="courseRate">
-                        <span className="category">web design</span>
-
-                        <span className="rate">
-                            <icon.StarFill />
-                            <icon.StarFill />
-                            <icon.StarFill />
-                            <icon.StarFill />
-                            <icon.StarHalf />
-                        </span>
-                    </div>
-
-                    <div className="courseDets">
-                        <div className="subTitle">
-                            introducton to CSS
-                        </div>
-
-                        <hr />
-                        <div className="tutors">
-                            {/* <div className="tutorItem">
-                                <img src="assets/persons/2.jpg" alt="" />
-                                <span className="name">ZeeCode</span>
-                            </div> */}
-                            <div className="tutorItem">
-                                <img src="assets/persons/3.jpg" alt="" />
-                                <span className="name">Rufai</span>
+                        <div className="courseDets">
+                            <div className="subTitle">{course.title || "Course Title"}</div>
+                            <hr />
+                            <div className="tutors">
+                                {course.tutors && course.tutors.map((tutor, i) => (
+                                    <div className="tutorItem" key={i}>
+                                        <img src={tutor.image || "assets/persons/2.jpg"} alt="" />
+                                        <span className="name">{tutor.name || "Tutor Name"}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
 
-            <a href="/login">
+            <a href="/private">
                 <button className='btn1'>Start Now</button>
             </a>
         </div>
-    )
-}
+    );
+};
 
-export default Courses
+export default Courses;

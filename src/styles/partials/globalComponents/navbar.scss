@@ -1,16 +1,16 @@
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   padding: 20px 10% 10px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-color);
+  background-color: var(--bg-light);
   box-shadow: var(--box-shadow);
   z-index: 999;
-  margin-top: 2px;
   height: 70px;
+  border-bottom: 1px solid var(--main-color);
 
   .links {
     list-style: none;
@@ -27,24 +27,21 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .navbar {
-    width: 98vw;
+    justify-content: center;
+    .links {
+      display: none;
+    }
   }
 }
 
 @media screen and (max-width: 500px) {
   .navbar {
     padding: 10px 5% 10px 5%;
-    width: 97vw;
+
     .lg {
       display: none;
     }
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .navbar {
-    width: 96vw;
   }
 }

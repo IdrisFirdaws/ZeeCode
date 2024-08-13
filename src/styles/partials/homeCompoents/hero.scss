@@ -159,8 +159,11 @@
   .hero {
     text-align: center;
     padding-bottom: 10px !important;
-    .btn2 {
-      gap: 2px !important;
+    .buttons {
+      flex-direction: column;
+      .btn2 {
+        gap: 2px !important;
+      }
     }
   }
 
@@ -193,7 +196,7 @@
 @media screen and (max-width: 400px) {
   .heroLeft {
     .students {
-      display: none !important;
+      left: 20px;
     }
   }
 }

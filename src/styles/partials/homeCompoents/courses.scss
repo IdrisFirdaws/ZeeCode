@@ -8,6 +8,7 @@
     color: var(--text-dark);
   }
   .courseItem {
+    position: relative;
     padding: 3px;
     margin-right: 10px;
     margin-left: 10px;
@@ -15,6 +16,7 @@
     box-shadow: var(--box-shadow);
     border-radius: 4px;
     margin-bottom: 20px;
+    min-height: 400px;
     .courseImg {
       width: 100%;
       border-radius: 4px 4px 0 0;
@@ -46,7 +48,10 @@
 
     .courseDets {
       hr {
-        margin: 20px 5px;
+        position: absolute;
+        bottom: 40px;
+        width: 90%;
+        margin: 0 5%;
         border: 1px dashed var(--main-color);
       }
 
