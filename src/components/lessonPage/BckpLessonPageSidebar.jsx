@@ -1,3 +1,4 @@
+// Sidebar.js
 import React from 'react';
 
 const Sidebar = ({ subLessons, toggleSidebar, sidebarOpen }) => {
@@ -9,17 +10,12 @@ const Sidebar = ({ subLessons, toggleSidebar, sidebarOpen }) => {
     };
 
     return (
-        <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-            <div className="subTitle" style={{ textAlign: 'center' }}>Sublessons</div>
+        <div className="sidebar">
+            <h3 className='subTitle'>Sublessons</h3>
             <ul>
                 {subLessons.map((subLesson) => (
-                    <li key={subLesson.id}>
-                        <button
-                            onClick={() => {
-                                handleScrollToSubLesson(subLesson.id);
-                                toggleSidebar(); // Close the sidebar after navigating
-                            }}
-                        >
+                    <li key={subLesson.id} onClick={toggleSidebar}>
+                        <button onClick={() => handleScrollToSubLesson(subLesson.id)} >
                             {subLesson.title}
                         </button>
                     </li>

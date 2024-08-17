@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import FetchTopics from '../../hooks/fetchTopics'; // Adjust the path if necessary
+import useLessons from '../../hooks/UseLessons'; // Adjust the path if necessary
 
 const Home = () => {
     const [searchTerm, setSearchTerm] = useState("");
-    const { lessons, loading, error } = FetchTopics(); // Fetch lessons using the FetchTopics component
+    const { lessons, loading, error } = useLessons(); // Fetch all lessons here
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
+    // Handle cases where lessons might be undefined or null
     const filteredLessons = lessons ? Object.keys(lessons).filter((lessonId) =>
         lessons[lessonId].title.toLowerCase().includes(searchTerm.toLowerCase())
     ) : [];
@@ -44,3 +45,5 @@ const Home = () => {
 };
 
 export default Home;
+
+

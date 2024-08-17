@@ -1,9 +1,9 @@
 import React from 'react';
 import * as icon from 'react-bootstrap-icons';
-import FetchTopics from '../../hooks/fetchTopics'; // Adjust the path if necessary
+import useLessons from '../../hooks/UseLessons';
 
 const Courses = () => {
-    const { lessons, loading, error } = FetchTopics();
+    const { lessons, loading, error } = useLessons();
 
     // Handle the state where the data is still loading
     if (loading) {
@@ -15,7 +15,7 @@ const Courses = () => {
         return <div>Error: {error}</div>;
     }
 
-    // Convert lessons object to an array for easier manipulation
+    // Check if lessons is an array before attempting to map
     const lessonArray = Array.isArray(lessons) ? lessons : Object.values(lessons);
 
     // Randomly select three courses

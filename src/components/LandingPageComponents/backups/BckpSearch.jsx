@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import * as icon from 'react-bootstrap-icons';
-import FetchTopics from '../../hooks/fetchTopics'; // Adjust the path if necessary
+import useLessons from '../../hooks/UseLessons'; // Adjust the path if necessary
 
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchMade, setSearchMade] = useState(false); // Track if search has been performed
-    const { lessons, loading, error } = FetchTopics();
+    const { lessons, loading, error } = useLessons();
 
     // Filter lessons based on search term
     const filteredLessons = lessons ? Object.keys(lessons).filter((lessonId) =>
