@@ -29,13 +29,22 @@ const FetchTopics = () => {
             html: {
                 title: "HTML",
                 sublessons: [
-                    { id: "introduction", title: "Introduction" },
+                    { id: "introduction_to_html", title: "Introduction to HTML" },
                     { id: "elements_and_tags", title: "Elements and Tags" },
                     { id: "attributes", title: "Attributes" },
-                    { id: "accessibility_a11y", title: "Accessibility (a11y)" },
+                    { id: "text_formatting", title: "Text Formatting" },
+                    { id: "links_and_navigation", title: "Links and Navigation" },
+                    { id: "images_and_multimedia", title: "Images and Multimedia" },
+                    { id: "forms_and_input_elements", title: "Forms and Input Elements" },
+                    { id: "tables", title: "Tables" },
                     { id: "html5_features", title: "HTML5 Features" },
+                    { id: "document_metadata", title: "Document Metadata" },
+                    { id: "html_entities", title: "HTML Entities" },
+                    { id: "best_practices", title: "Best Practices" },
+                    { id: "accessibility_a11y", title: "Accessibility (a11y)" }
                 ]
             },
+
             css: {
                 title: "CSS",
                 sublessons: [

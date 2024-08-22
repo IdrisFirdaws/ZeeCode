@@ -30,7 +30,7 @@ const Introduction = ({ id }) => {
     `;
 
     return (
-        <div id="introduction" className="subLesson">
+        <div id="introduction_to_html" className="subLesson">
             <h3 className='subTitle'>Introduction to HTML</h3>
             <p className='subLessonText'>
                 HTML (HyperText Markup Language) is the standard markup language used to create web pages.
