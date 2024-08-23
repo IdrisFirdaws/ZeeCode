@@ -5,6 +5,12 @@ import BoxModel from './css/BoxModel';
 import CSSSyntaxAndSelectors from './css/CSSSyntaxAndSelectors';
 import CSSColorsAndUnits from './css/CSSColorAndUnits';
 import Typography from './css/Typography';
+import LayoutTechniques from './css/LayoutTechniques';
+import ResponsiveDesign from './css/ResponsiveDesign';
+import StylingForms from './css/StylingForms';
+import TransitionsAndAnimations from './css/TransitionAndAnimation';
+import CSSVariables from './css/CSSVariables';
+import AdvancedLayoutTechniques from './css/AdvancedLayoutTechniques';
 
 
 const CSSContent = () => (
@@ -16,6 +22,12 @@ const CSSContent = () => (
         <CSSColorsAndUnits />
         <Typography />
         <BoxModel />
+        <LayoutTechniques />
+        <ResponsiveDesign />
+        <StylingForms />
+        <TransitionsAndAnimations />
+        <CSSVariables />
+        <AdvancedLayoutTechniques />
     </div>
 );
 

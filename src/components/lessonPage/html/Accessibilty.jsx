@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-const Accessibility = ({ id }) => {
-    useEffect(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    }, [id]);
-
+const AccessibilityOverview = () => {
     const [copied, setCopied] = useState('');
 
     const handleCopy = (code) => {
@@ -28,133 +24,117 @@ const Accessibility = ({ id }) => {
         </div>
     );
 
-    const codeSnippets = {
-        alt: `
+    const accessibilityExamples = [
+        {
+            title: 'Introduction to Accessibility',
+            description: 'Accessibility (a11y) refers to the design of products, devices, services, or environments for people with disabilities. In the context of web development, it involves creating web content that can be accessed by people with various disabilities, including visual, auditory, cognitive, and physical impairments.',
+            code: '',
+            fileType: ''
+        },
+        {
+            title: 'Importance of Accessibility',
+            description: 'Making your website accessible ensures that it can be used by as many people as possible, including those with disabilities. Accessibility also improves the overall user experience and can have a positive impact on SEO.',
+            code: '',
+            fileType: ''
+        },
+        {
+            title: 'Key Concepts in Accessibility',
+            description: 'Some key concepts in web accessibility include semantic HTML, ARIA (Accessible Rich Internet Applications) roles, keyboard navigation, and providing alternative text for non-text content.',
+            code: '',
+            fileType: ''
+        },
+        {
+            title: 'Semantic HTML',
+            description: 'Using semantic HTML elements like <header>, <footer>, <main>, <nav>, and <section> helps convey the meaning and structure of the content to assistive technologies.',
+            code: `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Semantic HTML Example</title>
 </head>
 <body>
-    <img src="https://via.placeholder.com/150" alt="Placeholder image description">
-</body>
-</html>
-        `,
-        ariaLabel: `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <button aria-label="Close">X</button>
-</body>
-</html>
-        `,
-        role: `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <nav role="navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
+    <header>
+        <h1>Website Title</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
     </nav>
+    <main>
+        <section id="home">
+            <h2>Home Section</h2>
+            <p>Content for the home section.</p>
+        </section>
+        <section id="about">
+            <h2>About Section</h2>
+            <p>Content for the about section.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Footer content.</p>
+    </footer>
 </body>
 </html>
-        `,
-        tabindex: `
+            `,
+            fileType: 'HTML'
+        },
+        {
+            title: 'ARIA Roles and Attributes',
+            description: 'ARIA roles and attributes can be used to enhance accessibility for dynamic content and complex web applications. For example, the role="alert" attribute is used to identify an element as an alert, which should be announced by screen readers.',
+            code: `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ARIA Roles Example</title>
 </head>
 <body>
-    <a href="#home" tabindex="1">Home</a>
-    <a href="#about" tabindex="2">About</a>
+    <div role="alert">This is an important alert message!</div>
 </body>
 </html>
-        `,
-        ariaDescribedBy: `
+            `,
+            fileType: 'HTML'
+        },
+        {
+            title: 'Keyboard Accessibility',
+            description: 'Ensure that all interactive elements are accessible using keyboard navigation. This includes providing keyboard focus and handling keyboard events properly.',
+            code: `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Keyboard Accessibility Example</title>
 </head>
 <body>
-    <label id="description">Enter your name:</label>
-    <input type="text" aria-describedby="description">
+    <button tabindex="0">Click Me</button>
 </body>
 </html>
-        `,
-        ariaLive: `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div aria-live="polite">
-        <p>Live region content updates dynamically.</p>
-    </div>
-</body>
-</html>
-        `
-    };
-
-    const getDescription = (attr) => {
-        const descriptions = {
-            alt: 'provide alternative text for images if they cannot be displayed.',
-            ariaLabel: 'provide an accessible name for interactive elements.',
-            role: 'define the role of an element to help assistive technologies understand its purpose.',
-            tabindex: 'control the order in which elements receive focus when navigating with a keyboard.',
-            ariaDescribedBy: 'provide a reference to an element that describes the current element.',
-            ariaLive: 'announce dynamic content updates to screen readers.'
-        };
-
-        return descriptions[attr] || 'provide additional information about an element.';
-    };
+            `,
+            fileType: 'HTML'
+        }
+    ];
 
     return (
-        <div id='accessibility_a11y' className="subLesson">
-            <h3 className="subTitle">Accessibility (a11y)</h3>
+        <div id="accessibility" className="subLesson">
+            <h3 className="subTitle">Accessibility (a11y) Overview</h3>
             <p className="subLessonText">
-                Accessibility (a11y) ensures that web content is usable by everyone, including people with disabilities. Here are some key accessibility attributes and techniques:
+                Accessibility (a11y) in web development ensures that websites are usable by people with various disabilities. It involves using semantic HTML, ARIA roles, and ensuring keyboard accessibility to create an inclusive web experience.
             </p>
-
-            {Object.entries(codeSnippets).map(([attr, code]) => (
-                <React.Fragment key={attr}>
-                    <h4 className="subTextTitle">
-                        {attr.charAt(0).toUpperCase() + attr.slice(1)} Attribute
-                    </h4>
-                    <p className="subText">
-                        The <code>{attr}</code> attribute is used to {getDescription(attr)}.
-                    </p>
-                    {renderCodeSnippet(code, 'HTML')}
-                    <h4 className="subTextTitle">Preview:</h4>
-                    <iframe
-                        srcDoc={code}
-                        className="code-preview"
-                        title={`${attr.charAt(0).toUpperCase() + attr.slice(1)} Attribute Preview`}
-                    ></iframe>
-                </React.Fragment>
+            {accessibilityExamples.map((example, index) => (
+                <div key={index} className="tag-section">
+                    <h4 className="subTextTitle">{example.title}</h4>
+                    <p className="subText">{example.description}</p>
+                    {example.code && renderCodeSnippet(example.code, example.fileType)}
+                </div>
             ))}
         </div>
     );
 };
 
-export default Accessibility;
+export default AccessibilityOverview;

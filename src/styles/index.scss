@@ -188,6 +188,11 @@ a {
   border-radius: 10px;
 }
 
+.ad {
+  font-size: 1.5em;
+  color: blue;
+}
+
 // global
 @import url(partials/globalComponents/navbar.scss);
 @import url(partials/globalComponents/footer.scss);

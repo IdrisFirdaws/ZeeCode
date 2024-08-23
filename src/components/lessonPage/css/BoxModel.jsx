@@ -27,10 +27,10 @@ const BoxModel = ({ id }) => {
     const advancedBoxModelCSSCode = `
 /* Advanced Box Model */
 .advanced-box {
-    width: 300px;
-    padding: 30px;
-    border: 10px solid red;
-    margin: 20px;
+   width: 200px; /* Width of the box */
+    padding: 20px; /* Space inside the box */
+    border: 5px solid red; /* Border around the box */
+    margin: 15px; /* Space outside the box */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
     `;
@@ -53,10 +53,10 @@ const BoxModel = ({ id }) => {
 
         /* Advanced Box Model */
         .advanced-box {
-            width: 300px;
-            padding: 30px;
-            border: 10px solid red;
-            margin: 20px;
+           width: 200px; /* Width of the box */
+    padding: 20px; /* Space inside the box */
+    border: 5px solid red; /* Border around the box */
+    margin: 15px; /* Space outside the box */
             box-sizing: border-box;
         }
     </style>

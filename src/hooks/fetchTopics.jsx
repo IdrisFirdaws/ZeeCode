@@ -40,8 +40,8 @@ const FetchTopics = () => {
                     { id: "html5_features", title: "HTML5 Features" },
                     { id: "document_metadata", title: "Document Metadata" },
                     { id: "html_entities", title: "HTML Entities" },
-                    { id: "best_practices", title: "Best Practices" },
-                    { id: "accessibility_a11y", title: "Accessibility (a11y)" }
+                    { id: "accessibility", title: "Accessibility" },
+                    { id: "html_best_practices", title: "HTML Best Practices" }
                 ]
             },
 
@@ -58,7 +58,7 @@ const FetchTopics = () => {
                     { id: "styling_forms", title: "Styling Forms" },
                     { id: "transitions_and_animations", title: "Transitions and Animations" },
                     { id: "css_variables", title: "CSS Variables (Custom Properties)" },
-                    { id: "css_grid_and_flexbox_advanced_techniques", title: "CSS Grid and Flexbox Advanced Techniques" },
+                    { id: "advanced_layout_techniques", title: "CSS Grid and Flexbox Advanced Techniques" },
                     { id: "pseudo_classes_and_pseudo_elements", title: "Pseudo-Classes and Pseudo-Elements" },
                     { id: "css_preprocessors", title: "CSS Preprocessors" },
                     { id: "css_frameworks", title: "CSS Frameworks" },
