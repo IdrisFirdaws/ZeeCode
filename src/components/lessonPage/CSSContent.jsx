@@ -11,12 +11,16 @@ import StylingForms from './css/StylingForms';
 import TransitionsAndAnimations from './css/TransitionAndAnimation';
 import CSSVariables from './css/CSSVariables';
 import AdvancedLayoutTechniques from './css/AdvancedLayoutTechniques';
+import PseudoClassesAndPseudoElements from './css/PsuedoClassesAndElements';
+import CSSPreprocessors from './css/CSSPreprocessors';
+import CSSFrameworks from './css/CSSFrameworks';
+import BestPracticesAndPerformanceOptimization from './css/BestPrecticesOptimization';
+import CSSForAccessibility from './css/CSSForAccessibilty';
 
 
 const CSSContent = () => (
     <div className="lessonContent">
         <h2 className='title'>CSS</h2>
-        <h2 className='title'>This lesson is still being updated</h2>
         <IntroductionToCSS />
         <CSSSyntaxAndSelectors />
         <CSSColorsAndUnits />
@@ -28,6 +32,11 @@ const CSSContent = () => (
         <TransitionsAndAnimations />
         <CSSVariables />
         <AdvancedLayoutTechniques />
+        <PseudoClassesAndPseudoElements />
+        <CSSPreprocessors />
+        <CSSFrameworks />
+        <BestPracticesAndPerformanceOptimization />
+        <CSSForAccessibility />
     </div>
 );
 
