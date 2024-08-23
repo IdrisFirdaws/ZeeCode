@@ -14,7 +14,7 @@ const Hero = () => {
 
                 <div className="buttons">
                     <a href="/private">
-                        <button className="btn1">Start Now</button>
+                        <button className="btn1">Start Tutorial Now</button>
                     </a>
                     <button className="btn2">
                         <icon.Youtube />

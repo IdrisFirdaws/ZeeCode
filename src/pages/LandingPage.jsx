@@ -1,4 +1,4 @@
-import Courses from "../components/LandingPageComponents/Courses";
+// import Courses from "../components/LandingPageComponents/Courses";
 import Hero from "../components/LandingPageComponents/Hero";
 import QuoteBox from "../components/LandingPageComponents/QuoteBox";
 import Search from "../components/LandingPageComponents/Search";
@@ -13,7 +13,7 @@ function LandingPage() {
             <Hero />
             <QuoteBox />
             <Search />
-            <Courses />
+            {/* <Courses /> */}
             <Teacher />
             <Testimonials />
             <Community />

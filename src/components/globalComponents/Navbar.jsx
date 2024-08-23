@@ -26,7 +26,7 @@ const Navbar = ({ showButton }) => {
                 {showButton && (
                     <li className='lg'>
                         <a href="/private">
-                            <button className="btn1">Start Now</button>
+                            <button className="btn1">Start Tutorial Now</button>
                         </a>
                     </li>
                 )}
